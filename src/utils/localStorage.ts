@@ -15,6 +15,10 @@ export const setNewTaskLocalStorage = (task: ITask) => {
   localStorage.setItem(LOCAL_STORAGE_KEYS.tasks, JSON.stringify(tasks));
 };
 
+export const setUpdatedTaskListOnLocalStorage = (tasks: ITask[]) => {
+  localStorage.setItem(LOCAL_STORAGE_KEYS.tasks, JSON.stringify(tasks));
+};
+
 export const getTasksFromLocalStorage = () => {
   const tasks = localStorage.getItem(LOCAL_STORAGE_KEYS.tasks);
   if (tasks) {

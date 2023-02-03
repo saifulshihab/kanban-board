@@ -26,6 +26,10 @@ export const task = (
   switch (action.type) {
     case "ADD_NEW_TASK":
       return { ...state, tasks: [...state.tasks, action.payload.task] };
+
+    case "MOVE_TASK":
+      return { tasks: action.payload.tasks };
+
     default:
       return state;
   }
