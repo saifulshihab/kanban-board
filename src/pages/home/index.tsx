@@ -53,7 +53,7 @@ const HomePage: React.FC = () => {
           ? {
               ...task,
               status: destination.droppableId as TBoardType,
-              timestamps: new Date()
+              timestamps: new Date(),
             }
           : task
       );
@@ -85,6 +85,16 @@ const HomePage: React.FC = () => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="w-full min-h-screen">
+        <div className="flex items-center justify-end p-1 px-2">
+          <a
+            className="text-xs font-bold text-gray-600"
+            href="https://github.com/saifulshihab/kanban-board"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub Repo Link
+          </a>
+        </div>
         <div className="md:container m-auto  p-5 py-10 md:p-10 md:py-20">
           <div className="w-full flex flex-col items-center gap-6">
             <div className="mb-2 md:mb-3">
