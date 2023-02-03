@@ -1,13 +1,13 @@
 import { nanoid } from "nanoid";
 import React, { useState } from "react";
-import BoardColumn from "../../components/organisms/board/BoardColumn";
+import Board from "../../components/organisms/home/BoardColumn";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { ICreateTaskInput, ITask } from "../../types/task";
 import { setNewTaskLocalStorage } from "../../utils/localStorage";
 
 const initialInput: ICreateTaskInput = { title: "" };
 
-const BoardPage: React.FC = () => {
+const HomePage: React.FC = () => {
   const [taskInput, setTaskInput] = useState<ICreateTaskInput>(initialInput);
 
   const dispatch = useAppDispatch();
@@ -62,9 +62,9 @@ const BoardPage: React.FC = () => {
             </button>
           </form>
           <div className="w-full lg:w-auto flex flex-col md:flex-row items-start gap-5">
-            <BoardColumn columnType="TODO" tasks={tasks} />
-            <BoardColumn columnType="IN_PROGRESS" tasks={[]} />
-            <BoardColumn columnType="DONE" tasks={[]} />
+            <Board boardType="TODO" tasks={tasks} />
+            <Board boardType="IN_PROGRESS" tasks={[]} />
+            <Board boardType="DONE" tasks={[]} />
           </div>
         </div>
       </div>
@@ -72,4 +72,4 @@ const BoardPage: React.FC = () => {
   );
 };
 
-export default BoardPage;
+export default HomePage;

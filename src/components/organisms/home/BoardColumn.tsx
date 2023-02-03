@@ -1,21 +1,21 @@
 import React from "react";
 import { boardColumns } from "../../../constant/board";
-import { TBoardColumnType } from "../../../types/board";
+import { TBoardType } from "../../../types/board";
 import { ITask } from "../../../types/task";
 import TaskCard from "./TaskCard";
 
 interface IProps {
-  columnType: TBoardColumnType;
+  boardType: TBoardType;
   tasks: ITask[];
 }
 
-const BoardColumn: React.FC<IProps> = (props) => {
-  const { columnType, tasks } = props;
+const Board: React.FC<IProps> = (props) => {
+  const { boardType, tasks } = props;
   return (
     <div className="flex flex-col border border-zinc-600 w-full lg:min-w-[300px] max-w-[350px]">
       <div className="w-full p-2 flex items-center justify-center bg-primary">
         <p className="text-2xl text-gray-800 font-semibold truncate">
-          {boardColumns[columnType]}
+          {boardColumns[boardType]}
         </p>
       </div>
       <div className="p-4 px-6 flex flex-col gap-3">
@@ -29,4 +29,4 @@ const BoardColumn: React.FC<IProps> = (props) => {
   );
 };
 
-export default BoardColumn;
+export default Board;

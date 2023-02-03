@@ -1,1 +1,1 @@
-export type TBoardColumnType = "TODO" | "IN_PROGRESS" | "DONE";
+export type TBoardType = "TODO" | "IN_PROGRESS" | "DONE";
