@@ -19,7 +19,8 @@
     "no-console": [1],
     "@typescript-eslint/no-explicit-any": [0],
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "no-empty": [0]
   },
   "settings": {
     "react": {
