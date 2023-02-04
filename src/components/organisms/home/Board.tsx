@@ -19,7 +19,7 @@ const Board: React.FC<IProps> = (props) => {
   );
   return (
     <div className="flex flex-col border border-zinc-600 w-full lg:min-w-[300px] md:max-w-[350px]">
-      <div className="w-full p-2 flex items-center justify-center bg-primary">
+      <div className="w-full p-2 flex items-center justify-center bg-primary border-b border-zinc-600">
         <p className="text-2xl text-gray-800 font-semibold truncate">
           {boardColumns[boardType]}
         </p>
