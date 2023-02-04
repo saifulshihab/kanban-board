@@ -48,6 +48,9 @@ const HomePage: React.FC = () => {
       const { source, draggableId, destination } = result;
       if (!source || !draggableId || !destination) return;
 
+      // skip, while drop in the same board
+      if (source.droppableId === destination.droppableId) return;
+
       const updatedTaskList = tasks.map((task) =>
         task.id === draggableId
           ? {
